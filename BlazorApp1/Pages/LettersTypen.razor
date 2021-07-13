@@ -1,0 +1,21 @@
+﻿@page "/MaxChars"
+@inherits LettersTypenBase
+
+
+<div>
+    <hr />
+    <b>input: </b> <input style="width: 750px;" @bind="Input" @bind:event="oninput" />
+    <hr />
+    <div>
+        <p><strong>max karakters nog te typen: </strong> @MaxcharsToType</p>
+        <p><strong>Aantal woorden getypt: </strong>@AantalWoorden</p>
+    </div>
+    <hr />
+    <div>
+        @((MarkupString)WoordenVetTssSterretjes)
+    </div>
+
+    <div>
+        @((MarkupString)InputWithEmoticons)
+    </div>
+</div>

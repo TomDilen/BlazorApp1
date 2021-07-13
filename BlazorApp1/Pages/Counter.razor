@@ -1,0 +1,28 @@
+﻿@page "/counter"
+
+<h1 style="color.">Counter</h1>
+
+<p>Current count: @currentCount</p>
+<input id="Text1" type="text"/>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Tel op (@AddValueByCount)</button>
+
+@code {
+    private int currentCount = 0;
+
+
+    [Parameter]
+    public int AddValueByCount { get; set; } = 5;
+
+
+
+
+    private void IncrementCount()
+    {
+        currentCount+=AddValueByCount;
+    }
+    private void setValue()
+    {
+
+    }
+}
