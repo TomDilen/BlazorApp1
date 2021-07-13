@@ -9,7 +9,7 @@ namespace BlazorApp1.Shared
 {
     public class ForecastBase : ComponentBase
     {
-        protected  WeatherForecast[] Forecasts;// { get; set; }
+        protected  WeatherForecast[] forecasts;// { get; set; }
 
 
 
@@ -18,7 +18,7 @@ namespace BlazorApp1.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            Forecasts = await WeatherForecastService.GetForecastAsync(DateTime.Now);
+            forecasts = await WeatherForecastService.GetForecastAsync(DateTime.Now);
         }
 
     }
