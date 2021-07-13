@@ -27,15 +27,10 @@ namespace BlazorApp1.Data
 
         public async Task<FootbalMatch[]> GetFootbalMatchAsync(DateTime startDate, int numberOfMatches)
         {
-            //Task<int> task = new Task<int>(TelKaraktersUitBestand);
-            //task.Start();
-            ////Task.Run(() => CreateFootbalMatches(startDate, numberOfMatches));
-
-            //Task<FootbalMatch[]> task = new Task<FootbalMatch[]>(CreateFootbalMatches(startDate, numberOfMatches));
             return  CreateFootbalMatches(startDate, numberOfMatches);
         }
         
-        public FootbalMatch[] CreateFootbalMatches(DateTime startDate, int numberOfMatches) {
+        private FootbalMatch[] CreateFootbalMatches(DateTime startDate, int numberOfMatches) {
 
             Random rnd = new Random();
             Country[] Countries   = _countries.OrderBy(x => rnd.Next()).ToArray();
@@ -55,16 +50,7 @@ namespace BlazorApp1.Data
             var rng = new Random();
             for (int i = 0; i < 4; i++)
             {
-               
 
-                //int countryHomeIndex = rng.Next(Countries.Length);
-                //int countryOutIndex = countryHomeIndex;
-
-                ////zoeken tot 2 indexen verschillend zijn
-                //while (countryHomeIndex == countryOutIndex)
-                //    countryOutIndex = rng.Next(Countries.Length);
-
-                
                 terug[i].CountryHome = Countries[i*2];
                 terug[i].CountryOut = Countries[(i*2)+1];
 
